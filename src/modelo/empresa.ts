@@ -23,4 +23,7 @@ export default class Empresa{
     public set setProdutos(produtos: Array<Produto>){
         this.produtos = produtos
     }
+    public set setServicos(servicos: Array<Servico>){
+        this.servicos = servicos
+    }
 }
