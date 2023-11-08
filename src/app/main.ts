@@ -20,7 +20,9 @@ while (execucao) {
     console.log(`1 - Cadastrar cliente`);
     console.log(`2 - Listar todos os clientes`);
     console.log(`3 - Cadastrar produto`);
-    console.log(`4 - listar todos os produtos`);
+    console.log(`4 - Listar todos os produtos`);
+    // console.log(`5 - Adicionar serviço ao cliente`)
+    console.log(`6 - Adicionar produto ao cliente`)
     console.log(`0 - Sair`);
 
     let entrada = new Entrada()
@@ -41,6 +43,11 @@ while (execucao) {
         case 4:
             let listagemProd = new ListagemProdutos(empresa.getProdutos)
             listagemProd.listar()
+        case 6:
+            let listagemClienteP = new ListagemClientes(empresa.getClientes)
+            listagemClienteP.listar()
+            let listagemProdutoP = new ListagemProdutos(empresa.getProdutos)
+            listagemProdutoP.listar()
         case 0:
             execucao = false
             console.log(`Até mais`)
