@@ -1,4 +1,6 @@
 import Entrada from "../io/entrada";
+import Cliente from "../modelo/cliente";
+import cliente from "../modelo/cliente";
 import Empresa from "../modelo/empresa"
 import Produto from "../modelo/produto";
 import Servico from "../modelo/servico";
@@ -55,11 +57,9 @@ while (execucao) {
             let opcaoCliente = entrada.receberTexto("\nDigite o CPF do cliente a ser registrado o produto/serviço: \n")
             console.log("***************************************")
             let opcaoProduto = entrada.receberNumero("\nDigite o ID do produto/serviço a ser registrado: \n")
-            empresa.getClientes.forEach(cliente => {
-                if (cliente.getCpf.getValor == opcaoCliente){
-                    cliente.getProdutosConsumidos.push(Produto[opcaoProduto])
-                }
-            });
+            
+            
+
             break;
         case 0:
             execucao = false

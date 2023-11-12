@@ -6,13 +6,16 @@ import Telefone from "./telefone"
 import Sexo from "./sexo"
 
 export default class Cliente {
+    static find(arg0: (p: any) => boolean) {
+        throw new Error("Method not implemented.")
+    }
     public nome: string
     public nomeSocial: string
     private cpf: CPF
     private rgs: Array<RG>
     private dataCadastro: Date
     private telefones: Array<Telefone>
-    private produtosConsumidos: Array<Produto>
+    public produtosConsumidos: Array<Produto>
     private servicosConsumidos: Array<Servico>
     private sexo: Sexo
     public index: number
