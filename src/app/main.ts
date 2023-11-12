@@ -40,14 +40,27 @@ while (execucao) {
         case 3:
             let cadastrarProduto = new CadastroProdutos(empresa.getProdutos)
             cadastrarProduto.cadastrar()
+            break;
         case 4:
             let listagemProd = new ListagemProdutos(empresa.getProdutos)
             listagemProd.listar()
+            break;
         case 6:
             let listagemClienteP = new ListagemClientes(empresa.getClientes)
             listagemClienteP.listar()
+            console.log("=======================================")
             let listagemProdutoP = new ListagemProdutos(empresa.getProdutos)
             listagemProdutoP.listar()
+            console.log("=======================================")
+            let opcaoCliente = entrada.receberTexto("\nDigite o CPF do cliente a ser registrado o produto/serviço: \n")
+            console.log("***************************************")
+            let opcaoProduto = entrada.receberNumero("\nDigite o ID do produto/serviço a ser registrado: \n")
+            empresa.getClientes.forEach(cliente => {
+                if (cliente.getCpf.getValor == opcaoCliente){
+                    cliente.getProdutosConsumidos.push(Produto[opcaoProduto])
+                }
+            });
+            break;
         case 0:
             execucao = false
             console.log(`Até mais`)

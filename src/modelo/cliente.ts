@@ -15,6 +15,9 @@ export default class Cliente {
     private produtosConsumidos: Array<Produto>
     private servicosConsumidos: Array<Servico>
     private sexo: Sexo
+    public index: number
+
+    private static proximoIndex: number = 1;
     constructor(nome: string, nomeSocial: string, cpf: CPF, rgs: Array<RG>, dataCadastro: Date, telefones: Array<Telefone>, sexo: Sexo, produtosConsumidos: Array<Produto>) {
         this.nome = nome
         this.nomeSocial = nomeSocial
@@ -25,6 +28,8 @@ export default class Cliente {
         this.produtosConsumidos = produtosConsumidos
         this.servicosConsumidos = []
         this.sexo = sexo
+        this.index = Cliente.proximoIndex
+        Cliente.proximoIndex++;
     }
     public get getCpf(): CPF {
         return this.cpf
