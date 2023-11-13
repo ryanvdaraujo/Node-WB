@@ -1,5 +1,4 @@
 export default class Produto {
-    [x: string]: any;
     public nome: string
     public valor: number
     public index: number
@@ -11,5 +10,9 @@ export default class Produto {
         this.valor = valor
         this.index = Produto.proximoIndex;
         Produto.proximoIndex++;
+    }
+
+    public get getNome(): string {
+    return this.nome
     }
 }

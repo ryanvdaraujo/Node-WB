@@ -4,6 +4,7 @@ import cliente from "../modelo/cliente";
 import Empresa from "../modelo/empresa"
 import Produto from "../modelo/produto";
 import Servico from "../modelo/servico";
+import adicionarProdutoAoCliente from "../negocio/adicionarProdCliente";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProdutos from "../negocio/cadastroProduto";
 import ListagemClientes from "../negocio/listagemClientes";
@@ -57,7 +58,7 @@ while (execucao) {
             let opcaoCliente = entrada.receberTexto("\nDigite o CPF do cliente a ser registrado o produto/serviço: \n")
             console.log("***************************************")
             let opcaoProduto = entrada.receberNumero("\nDigite o ID do produto/serviço a ser registrado: \n")
-            
+            adicionarProdutoAoCliente(empresa.getClientes, empresa.getProdutos, opcaoCliente, opcaoProduto)
             
 
             break;
