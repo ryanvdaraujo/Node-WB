@@ -7,6 +7,7 @@ import Servico from "../modelo/servico";
 import adicionarProdutoAoCliente from "../negocio/adicionarProdCliente";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProdutos from "../negocio/cadastroProduto";
+import CadastroServicos from "../negocio/cadastroServico";
 import ListagemClientes from "../negocio/listagemClientes";
 import ListagemProdutos from "../negocio/listagemProdutos";
 
@@ -48,6 +49,10 @@ while (execucao) {
             let listagemProd = new ListagemProdutos(empresa.getProdutos)
             listagemProd.listar()
             break;
+        // case 5:
+        //     let listagemServicos = new CadastroServicos(empresa.getServicos)
+        //     cadastrarServico.cadastrar()
+        //     break;
         case 6:
             let listagemClienteP = new ListagemClientes(empresa.getClientes)
             listagemClienteP.listar()

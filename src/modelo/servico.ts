@@ -5,4 +5,8 @@ export default class Servico {
         this.nome = nome
         this.valor = valor
     }
+
+    public get getNome(): string {
+        return this.nome
+        }
 }
