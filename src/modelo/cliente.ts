@@ -15,7 +15,7 @@ export default class Cliente {
     private rgs: Array<RG>
     private dataCadastro: Date
     private telefones: Array<Telefone>
-    public produtosConsumidos: Array<Produto>
+    private produtosConsumidos: Array<Produto>
     private servicosConsumidos: Array<Servico>
     private sexo: Sexo
     public index: number
@@ -54,6 +54,14 @@ export default class Cliente {
     }
     public get getSexo(): Sexo {
         return this.sexo
+    }
+
+    public set setProdutosConsumidos(produtosConsumidos: Array<Produto>) {
+        this.produtosConsumidos = produtosConsumidos
+    }
+
+    public set setServicosConsumidos(servicosConsumidos: Array<Servico>) {
+        this.servicosConsumidos = servicosConsumidos
     }
 
 }

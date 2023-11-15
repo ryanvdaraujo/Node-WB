@@ -8,7 +8,7 @@ export default function adicionarProdutoAoCliente(clientes: Cliente[], produtos:
     
     if (cliente && produto) {
     // Adicionar o produto à lista de produtos consumidos
-        cliente.produtosConsumidos.push(produto);
+        cliente.setProdutosConsumidos.push(produto);
         console.log(`Produto ${produto.nome} adicionado à lista de ${cliente.nome}.`);
         
     } else {
