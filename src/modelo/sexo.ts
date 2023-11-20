@@ -3,4 +3,7 @@ export default class Sexo{
     constructor(sexo: string){
         this.sexo = sexo
     }
+    public get getGenero(): string{
+        return this.sexo
+    }
 }
