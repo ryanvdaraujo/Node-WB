@@ -21,9 +21,11 @@ import Listagem10menos from "../negocio/listagem10menos";
 import Listagem10Clientes from "../negocio/listagem10prodServQuant";
 import Listagem5Valor from "../negocio/listagem5valor";
 import ListagemClientes from "../negocio/listagemClientes";
+import ListagemMaxConsumoGenero from "../negocio/listagemConsGenero";
 import ListagemGeneroF from "../negocio/listagemGeneroF";
 import ListagemGeneroM from "../negocio/listagemGeneroM";
 import ListagemGeneroO from "../negocio/listagemGeneroO";
+import ListagemGeral from "../negocio/listagemGeral";
 import ListagemProdutos from "../negocio/listagemProdutos";
 import ListagemServicos from "../negocio/listagemServicos";
 
@@ -73,6 +75,7 @@ while (execucao) {
     console.log(`18 - Atualizar dados do Serviço`);
     console.log(`19 - Listar 5 clientes que mais consumiram em valor`);
     console.log(`20 - Listar 10 clientes que menos consumiram produtos ou serviços`);
+    console.log(`21 - Listar produtos ou serviços mais consumidos`);
     console.log(`0 - Sair`);
 
     let entrada = new Entrada()
@@ -136,11 +139,13 @@ while (execucao) {
             break;
             
         case 9:
+            // req 1
             let listagem10 = new Listagem10Clientes(empresa.getClientes);
             listagem10.listar()
             break;
 
         case 10:
+            // req 2
             let listagemGenero = new ListagemGeneroF(empresa.getClientes);
             listagemGenero.listar()
             break;
@@ -186,13 +191,27 @@ while (execucao) {
             break;
 
         case 19:
+            // req 6
             let Listagem5Valores = new Listagem5Valor(empresa.getClientes);
             Listagem5Valores.listar();
             break;
 
         case 20:
+            // req 5
             let listagemMenos = new Listagem10menos(empresa.getClientes);
             listagemMenos.listar();
+            break;
+
+        case 21:
+            // req 3
+            let listaGeral = new ListagemGeral(empresa.getClientes);
+            listaGeral.listar();
+            break;
+
+        case 22:
+            // req 4
+            let listConsumoGenero = new ListagemMaxConsumoGenero(empresa.getClientes);
+            listConsumoGenero.listar();
             break;
 
         case 0:
