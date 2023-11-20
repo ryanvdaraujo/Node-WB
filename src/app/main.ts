@@ -17,7 +17,9 @@ import AtualizarServico from "../negocio/atualizarServico";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProdutos from "../negocio/cadastroProduto";
 import CadastroServicos from "../negocio/cadastroServico";
+import Listagem10menos from "../negocio/listagem10menos";
 import Listagem10Clientes from "../negocio/listagem10prodServQuant";
+import Listagem5Valor from "../negocio/listagem5valor";
 import ListagemClientes from "../negocio/listagemClientes";
 import ListagemGeneroF from "../negocio/listagemGeneroF";
 import ListagemGeneroM from "../negocio/listagemGeneroM";
@@ -69,6 +71,8 @@ while (execucao) {
     console.log(`16 - Atualizar dados do cliente`);
     console.log(`17 - Atualizar dados do produto`);
     console.log(`18 - Atualizar dados do Serviço`);
+    console.log(`19 - Listar 5 clientes que mais consumiram em valor`);
+    console.log(`20 - Listar 10 clientes que menos consumiram produtos ou serviços`);
     console.log(`0 - Sair`);
 
     let entrada = new Entrada()
@@ -180,6 +184,17 @@ while (execucao) {
             let atualizarS = new AtualizarServico(empresa.getServicos);
             atualizarS.atualizar();
             break;
+
+        case 19:
+            let Listagem5Valores = new Listagem5Valor(empresa.getClientes);
+            Listagem5Valores.listar();
+            break;
+
+        case 20:
+            let listagemMenos = new Listagem10menos(empresa.getClientes);
+            listagemMenos.listar();
+            break;
+
         case 0:
             execucao = false;
             console.log(`Até mais`);
