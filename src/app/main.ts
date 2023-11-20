@@ -11,6 +11,9 @@ import adicionarProdutoAoCliente from "../negocio/adicionarProdCliente";
 import ApagarCliente from "../negocio/apagarCliente";
 import ApagarProdutos from "../negocio/apagarProduto";
 import ApagarServicos from "../negocio/apagarServico";
+import AtualizarCliente from "../negocio/atualizarCliente";
+import AtualizarProduto from "../negocio/atualizarProduto";
+import AtualizarServico from "../negocio/atualizarServico";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProdutos from "../negocio/cadastroProduto";
 import CadastroServicos from "../negocio/cadastroServico";
@@ -163,6 +166,20 @@ while (execucao) {
             apagarS.apagar();
             break;
 
+        case 16:
+            let atualizar = new AtualizarCliente(empresa.getClientes);
+            atualizar.atualizar();
+            break;
+
+        case 17:
+            let atualizarP = new AtualizarProduto(empresa.getProdutos);
+            atualizarP.atualizar();
+            break;
+
+        case 18:
+            let atualizarS = new AtualizarServico(empresa.getServicos);
+            atualizarS.atualizar();
+            break;
         case 0:
             execucao = false;
             console.log(`Até mais`);
