@@ -15,4 +15,7 @@ export default class Servico {
     public get getNome(): string {
         return this.nome
         }
+    public get getValor(): number {
+        return this.valor
+    }
 }

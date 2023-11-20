@@ -9,6 +9,8 @@ import Sexo from "../modelo/sexo";
 import Telefone from "../modelo/telefone";
 import adicionarProdutoAoCliente from "../negocio/adicionarProdCliente";
 import ApagarCliente from "../negocio/apagarCliente";
+import ApagarProdutos from "../negocio/apagarProduto";
+import ApagarServicos from "../negocio/apagarServico";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroProdutos from "../negocio/cadastroProduto";
 import CadastroServicos from "../negocio/cadastroServico";
@@ -59,6 +61,11 @@ while (execucao) {
     console.log(`11 - Listar clientes do gênero masculino`);
     console.log(`12 - Listar clientes de outro gênero`);
     console.log(`13 - Apagar cliente`);
+    console.log(`14 - Apagar produto`);
+    console.log(`15 - Apagar Serviço`);
+    console.log(`16 - Atualizar dados do cliente`);
+    console.log(`17 - Atualizar dados do produto`);
+    console.log(`18 - Atualizar dados do Serviço`);
     console.log(`0 - Sair`);
 
     let entrada = new Entrada()
@@ -146,6 +153,16 @@ while (execucao) {
             apagar.apagar();
             break;
         
+        case 14:
+            let apagarP = new ApagarProdutos(empresa.getProdutos);
+            apagarP.apagar();
+            break;
+
+        case 15:
+            let apagarS = new ApagarServicos(empresa.getServicos);
+            apagarS.apagar();
+            break;
+
         case 0:
             execucao = false;
             console.log(`Até mais`);
