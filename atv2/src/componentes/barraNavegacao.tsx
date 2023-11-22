@@ -2,6 +2,7 @@
 import { Component } from "react";
 import 'materialize-css/dist/css/materialize.min.css'
 import M from 'materialize-css'
+import SearchBar from "./searchBar"
 
 type props = {
     tema: string,
@@ -34,13 +35,13 @@ export default class BarraNavegacao extends Component<props> {
     }
 
     render() {
-        let estilo = `${this.props.tema}`
+        let estilo = `${this.props.tema}` 
         return (
             <>
-                <nav className={estilo}>
-                    <div className="nav-wrapper">
-                        <a className="brand-logo">World Beauty</a>
-                        <a data-target="mobile-menu" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                <nav className={estilo} >
+                    <div className="nav-wrapper" >
+                        <a className="brand-logo">World Beauty </a>
+                        <a data-target="mobile-menu" className="sidenav-trigger"><i className="material-icons">menu</i> </a>
                         <ul className="right hide-on-med-and-down">
                             {this.gerarListaBotoes()}
                         </ul>

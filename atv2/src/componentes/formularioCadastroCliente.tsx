@@ -109,8 +109,8 @@ export default class FormularioCadastroCliente extends Component<Props, State> {
               <button
                 className={estiloBotao}
                 type="submit"
-                name="action"
-              >
+                name="action" style={{color: "purple"}}>
+                  
                 Submit
                 <i className="material-icons right ">send</i>
               </button>
