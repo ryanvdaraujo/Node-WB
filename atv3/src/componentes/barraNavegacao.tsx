@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
-import SearchBar from "./searchBar";
+import SearchBar from "./searchBar.js";
 
 type Props = {
   tema: string;
