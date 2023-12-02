@@ -1,6 +1,6 @@
 import React from "react";
 import 'materialize-css/dist/css/materialize.min.css';
-import SearchBar from "./searchBar";
+import SearchBar from "./searchBar.tsx";
 
 type Props = {
     tema: string;
