@@ -4,8 +4,8 @@ type Props = {
   tema: string;
 };
 
-const FormularioCadastroCliente: React.FC<Props> = (props) => {
-  const [generoSelecionado, setGeneroSelecionado] = useState < string > ("");
+export default function FormularioCadastroCliente(props: Props) {
+  const [generoSelecionado, setGeneroSelecionado] = useState <string> ("");
 
   const handleGeneroChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setGeneroSelecionado(event.target.value);
@@ -21,22 +21,22 @@ const FormularioCadastroCliente: React.FC<Props> = (props) => {
         <div className="row">
           <div className="input-field col s6">
             <input id="first_name" type="text" className="validate" />
-            <label htmlFor="first_name">nome</label>
+            <label htmlFor="first_name">Nome</label>
           </div>
           <div className="input-field col s6">
             <input id="last_name" type="text" className="validate" />
-            <label htmlFor="last_name">sobrenome</label>
+            <label htmlFor="last_name">Sobrenome</label>
           </div>
         </div>
 
         <div className="row">
           <div className="input-field col s6">
             <input id="social_name" type="text" className="validate" />
-            <label htmlFor="first_name">nome social</label>
+            <label htmlFor="first_name">Nome social</label>
           </div>
           <div className="input-field col s6">
             <input id="idade" type="number" className="validate" />
-            <label htmlFor="last_name">idade</label>
+            <label htmlFor="last_name">Idade</label>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ const FormularioCadastroCliente: React.FC<Props> = (props) => {
         <div className="row">
           <div className="input-field col s6">
             <input id="telefone" type="text" className="validate" />
-            <label htmlFor="telefone">telefone</label>
+            <label htmlFor="telefone">Telefone</label>
           </div>
           <div className="input-field col s6">
             <input id="email" type="email" className="validate" />
@@ -65,7 +65,7 @@ const FormularioCadastroCliente: React.FC<Props> = (props) => {
         <div className="row space ">
           <p>
             <label>
-              <p>selecione o genero ao qual você se identifica</p>
+              <p>Selecione o gênero ao qual você se identifica:</p>
               <select
                 value={generoSelecionado}
                 onChange={handleGeneroChange}
@@ -85,9 +85,9 @@ const FormularioCadastroCliente: React.FC<Props> = (props) => {
           </p>
         </div>
 
-        <div className="row">
+        <div className="row margin-top">
           <div
-            className="col s12"
+            className="col s12 padding"
             style={{ display: "flex", justifyContent: "center" }}
           >
             <button
@@ -103,45 +103,5 @@ const FormularioCadastroCliente: React.FC<Props> = (props) => {
         </div>
       </form>
     </div>
-  );
+  )
 };
-
-export default FormularioCadastroCliente;
-
-
-// export default function FormularioCadastroCliente(props){
-//     const estiloBotao = `btn waves-effect waves-light ${props.tema}`
-//     return (
-//         <div className="row">
-//             <form className="col s12">
-//                 <div className="row">
-//                     <div className="input-field col s6">
-//                         <input id="first_name" type="text" className="validate" />
-//                         <label htmlFor="first_name">nome</label>
-//                     </div>
-//                     <div className="input-field col s6">
-//                         <input id="last_name" type="text" className="validate" />
-//                         <label htmlFor="last_name">sobrenome</label>
-//                     </div>
-//                 </div>
-//                 <div className="row">
-//                     <div className="input-field col s6">
-//                         <input id="telefone" type="text" className="validate" />
-//                         <label htmlFor="telefone">telefone</label>
-//                     </div>
-//                     <div className="input-field col s6">
-//                         <input id="email" type="email" className="validate" />
-//                         <label htmlFor="email">e-mail</label>
-//                     </div>
-//                 </div>
-//                 <div className="row">
-//                     <div className="col s12">
-//                         <button className={estiloBotao} type="submit" name="action">Submit
-//                             <i className="material-icons right">send</i>
-//                         </button>
-//                     </div>
-//                 </div>
-//             </form>
-//         </div>
-//     )
-// }

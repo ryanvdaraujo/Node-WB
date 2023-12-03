@@ -14,7 +14,7 @@ export default function Roteador() {
     setTela(novaTela);
   };
 
-  const RenderizarTela = () => {
+  const RenderizarTela = (tela: string) => {
     switch (tela) {
       case 'Clientes':
         return (
@@ -34,9 +34,9 @@ export default function Roteador() {
           <BarraNavegacao
           seletorView={selecionarView}
           tema="purple lighten-4"
-          botoes={['Clientes', 'Cadastros', 'Servicos', 'Produtos']}
-          />
-          <ListaServicos tema="purple lighten-4" />
+          botoes={['Clientes', 'Cadastros', 'Servicos', 'Produtos']} />
+          <ListaServicos
+          tema="purple lighten-4" />
           </>
         );
 
@@ -46,18 +46,33 @@ export default function Roteador() {
           <BarraNavegacao
           seletorView={selecionarView}
           tema="purple lighten-4"
-          botoes={['Clientes', 'Cadastros', 'Servicos', 'Produtos']}
-          />
+          botoes={['Clientes', 'Cadastros', 'Servicos', 'Produtos']} />
           <ListaProdutos
           tema="purple lighten-4" />;
           </>
         );
 
+      case 'Cadastros':
+        return (
+          <>
+          <BarraNavegacao
+          seletorView={selecionarView}
+          tema="purple lighten-4"
+          botoes={['Clientes', 'Cadastros', 'Servicos', 'Produtos']} />
+          <FormularioCadastroCliente
+          tema="purple lighten-4" />;
+          </>
+        );
+
       default:
-        return <FormularioCadastroCliente tema="purple lighten-4" />;
+        return (
+          <div>
+            <h1>Erro</h1>
+          </div>
+        )
     }
   };
   return (
-    RenderizarTela()
+    RenderizarTela(tela)
     );
 };
