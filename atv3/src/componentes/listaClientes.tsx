@@ -2,11 +2,7 @@ import React from "react";
 import 'materialize-css/dist/css/materialize.min.css';
 import SearchBar from "./searchBar.tsx";
 
-type Props = {
-    tema: string;
-};
-
-const ListaCliente: React.FC<Props> = (props) => {
+export default function ListaCliente (props) {
     let estilo = `collection-item active1 ${props.tema}`;
     let estiloBotao = `btn waves-effect waves-light ${props.tema}`;
 
@@ -41,11 +37,30 @@ const ListaCliente: React.FC<Props> = (props) => {
                     <SearchBar />
                 </div>
             </div>
-            <a className="collection-item">Cliente 1</a>
-            <a className={estilo}>Cliente 2</a>
-            <a className="collection-item">Cliente 3</a>
-            <a className={estilo}>Cliente 4</a>
-
+            <details>
+                <summary className="collection-item">Cliente 1</summary>
+                <p>RG: 00.000.000-0</p>
+                <p>CPF: 000.000.000-00</p>
+                <p>Endereço: Rua dos bobos, no 0</p>
+            </details>
+            <details>
+                <summary className={estilo}>Cliente 2</summary>
+                <p>RG: 00.000.000-1</p>
+                <p>CPF: 000.000.001-00</p>
+                <p>Endereço: Rua dos bobos, no 1</p>
+            </details>
+            <details>
+                <summary className="collection-item">Cliente 3</summary>
+                <p>RG: 00.000.000-2</p>
+                <p>CPF: 000.000.001-20</p>
+                <p>Endereço: Rua dos bobos, no 2</p>
+            </details>
+            <details>
+                <summary className={estilo}>Cliente 4</summary>
+                <p>RG: 00.000.000-3</p>
+                <p>CPF: 000.000.001-30</p>
+                <p>Endereço: Rua dos bobos, no 3</p>
+            </details>
             <div className="row" style={{ display: 'flex', justifyContent: 'center' }}>
                 <button className={estiloBotao} type="submit" name="action" style={{ color: "purple" }}>
                     alterar dados do cliente
@@ -59,19 +74,3 @@ const ListaCliente: React.FC<Props> = (props) => {
         </div>
     );
 };
-
-export default ListaCliente;
-
-
-// /* eslint-disable jsx-a11y/anchor-is-valid */
-// export default function ListaClientes(props) {
-//     const estilo = `collection-item active ${props.tema}`
-//     return (
-//         <div className="collection">
-//             <a className="collection-item">Cliente 1</a>
-//             <a className={estilo}>Cliente 2</a>
-//             <a className="collection-item">Cliente 3</a>
-//             <a className="collection-item">Cliente 4</a>
-//         </div>
-//     )
-// }

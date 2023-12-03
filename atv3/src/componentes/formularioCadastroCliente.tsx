@@ -85,9 +85,9 @@ export default function FormularioCadastroCliente(props: Props) {
           </p>
         </div>
 
-        <div className="row margin-top">
+        <div className="row">
           <div
-            className="col s12 padding"
+            className="col s12"
             style={{ display: "flex", justifyContent: "center" }}
           >
             <button
@@ -104,4 +104,4 @@ export default function FormularioCadastroCliente(props: Props) {
       </form>
     </div>
   )
-};
+}

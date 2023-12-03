@@ -1,11 +1,7 @@
 import React from "react";
 import SearchBar from "./searchBar.tsx";
 
-type Props = {
-  tema: string;
-};
-
-const ListaProdutos: React.FC<Props> = ({ tema }) => {
+export default function ListaProdutos ({ tema }) {
   const estilo = `collection-item active1 ${tema}`;
   const estiloBotao = `btn waves-effect waves-light ${tema}`;
 
@@ -48,14 +44,30 @@ const ListaProdutos: React.FC<Props> = ({ tema }) => {
         </div>
       </div>
 
-      <a className="collection-item">produto 1</a>
-      <a className={estilo}>Produto 2</a>
-      <a className="collection-item">Produto 3</a>
-      <a className={estilo}>Produto 4</a>
+      <details>
+        <summary className="collection-item">Produto 1</summary>
+        <p>Preço: 20,00</p>
+        <p>Id: 01</p>
+      </details>
+      <details>
+        <summary className={estilo}>Produto 2</summary>
+        <p>Preço: 30,00</p>
+        <p>Id: 02</p>
+      </details>
+      <details>
+        <summary className="collection-item">Produto 3</summary>
+        <p>Preço: 28,00</p>
+        <p>Id: 03</p>
+      </details>
+      <details>
+        <summary className={estilo}>Produto 4</summary>
+        <p>Preço: 25,00</p>
+        <p>Id: 04</p>
+      </details>
 
       <div
         className="row"
-        style={{ display: "flex", justifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center"}}
       >
         <button
           className={estiloBotao}
@@ -80,5 +92,3 @@ const ListaProdutos: React.FC<Props> = ({ tema }) => {
     </div>
   );
 };
-
-export default ListaProdutos;

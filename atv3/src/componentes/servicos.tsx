@@ -5,7 +5,7 @@ type Props = {
   tema: string;
 };
 
-const ListaServicos: React.FC<Props> = ({ tema }) => {
+export default function ListaServicos ({ tema }) {
   const estilo = `collection-item active1 ${tema}`;
   const estiloBotao = `btn waves-effect waves-light ${tema}`;
 
@@ -48,10 +48,26 @@ const ListaServicos: React.FC<Props> = ({ tema }) => {
         </div>
       </div>
 
-      <a className="collection-item">servico 1</a>
-      <a className={estilo}>servico 2</a>
-      <a className="collection-item">servico 3</a>
-      <a className={estilo}>servico 4</a>
+      <details>
+        <summary className="collection-item">Serviço 1</summary>
+        <p>Preço: 20,00</p>
+        <p>Id: 01</p>
+      </details>
+      <details>
+        <summary className={estilo}>Serviço 2</summary>
+        <p>Preço: 30,00</p>
+        <p>Id: 02</p>
+      </details>
+      <details>
+        <summary className="collection-item">Serviço 3</summary>
+        <p>Preço: 28,00</p>
+        <p>Id: 03</p>
+      </details>
+      <details>
+        <summary className={estilo}>Serviço 4</summary>
+        <p>Preço: 25,00</p>
+        <p>Id: 04</p>
+      </details>
 
       <div
         className="row"
@@ -80,5 +96,3 @@ const ListaServicos: React.FC<Props> = ({ tema }) => {
     </div>
   );
 };
-
-export default ListaServicos;
