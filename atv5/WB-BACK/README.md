@@ -17,7 +17,7 @@ após isso você deve entrar na pasta "front e depois SRC" abir o cmd e rodar o 
 
 ### Back-end
 
-* No repositório https://github.com/ryanvdaraujo/Node-WB/tree/main/atv5/WB-BACK há  um aplicativo  executável,  que  disponibiliza  todo  o  back-end, O  nome do aplicativo executável é “wbbackend”.Este arquivo está disponível na pasta chamada de “executável”.
+* No repositório https://github.com/ryanvdaraujo/Node-WB/tree/main/atv5/WB-BACK há  um aplicativo  executável,  que  disponibiliza  todo  o  back-end, O  nome do aplicativo executável é “wbbackend”. Este arquivo está disponível dentro da pasta chamada de “executável”.
 
 entre nesta pasta, abra o cmd e digite o comando: “java -jar wbbackend.jar”. É importante salientar que o executável só funciona  com  uma máquina virtual na versão 17 ou superior, e deve ser aberto usando o comando acima. somente clicando com o mouse no programa não dará certo.
 
