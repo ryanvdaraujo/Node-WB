@@ -1,30 +1,70 @@
-# ATV-WB
-## Atividade (WB) - Programação Orientada a Objetos - Fatec SJC
+# Getting Started with Create React App
 
--------------------------------------
-## Descrição da atividade
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Neste repositório, ha a sequencia de atividades feitas para a materia de programação orientada a objetos(poo). ela contem 5 atividades, sendo elas complementares umas as outras, para que no fim, possamos criar uma aplicação web destinada a atender a empresa "World Beauty", fazendo com que eles tenham uma aplicação para facilitar o processo de vendas, consultas de produtos e serviços, facilitar a vizualização de informações do banco de dados, entre outras coisas.
+## Available Scripts
 
-As atividades estão cada uma em uma pasta chamada atv- e o numero da sua atividade. Então a menos que a sua intenção seja vizualizar, todo o processo de criação da aplicação, voçê deve entrar diretamente na pasta atv-v que é onde o projeto chega ao fim do seu processo de criação.
+In the project directory, you can run:
 
-# como rodar o projeto?
+### `npm start`
 
-O projeto deve ter seu front-end e back-end iniciados separadamente. então aqui está o modo de iniciar cada um deles.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Front-end
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-* Inicialmente, é necessário clonar o repositorio, faça isso abrindo o cmd no local onde deseja que a pasta do projeto fique, e colar o comando que está dentro das aspas simples ' git clone "https://github.com/ryanvdaraujo/Node-WB.git"  '.
+### `npm test`
 
-após isso você deve entrar na pasta "front e depois SRC" abir o cmd e rodar o comando "npm i" para instalar as dependências do projeto front-end.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-* Depois, basta rodar o comando "npm start" e então, a aplicação GUI desenvolida carregará automaticamente no endereço http://localhost:3000/
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Back-end
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-* No repositório https://github.com/ryanvdaraujo/Node-WB/tree/main/atv5/WB-BACK há  um aplicativo  executável,  que  disponibiliza  todo  o  back-end, O  nome do aplicativo executável é “wbbackend”.Este arquivo está disponível na pasta chamada de “executável”.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-entre nesta pasta, abra o cmd e digite o comando: “java -jar wbbackend.jar”. É importante salientar que o executável só funciona  com  uma máquina virtual na versão 17 ou superior, e deve ser aberto usando o comando acima. somente clicando com o mouse no programa não dará certo.
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
